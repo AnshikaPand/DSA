@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+<body>
+<script>
+    // const promise = new doSomething();
+    // const promise2 = promise.then(sucessfulCallback,failureCallback)
+
+    // function doSomething(){
+    //     return new Promise((resolve)=>{
+    //         setTimeout(()=>{
+    //             console.log("did something");
+    //             resolve("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises")
+    //         },300)
+    //     })
+    // }
+
+    function doSomething() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      // Other things to do before completion of the promise
+      console.log("Did something");
+      // The fulfillment value of the promise
+      resolve("https://example.com/");
+    }, 200);
+  });
+}
+
+
+    </script>
+    
+</body>
+</html>

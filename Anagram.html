@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    
+const s = "xaxbbbxx"
+function anagram(s) {
+    if(s.length %2!==0){
+        return -1
+    } 
+
+const middlelength = s.length %2
+
+    const s1 = s.slice(0,middlelength)
+    const s2 = s.slice(middlelength)
+
+    const count = new Array (26).fill(0)
+    const charCodeA= 'a'.charCodeAt(0);
+
+    for(let i =0; i<s1.length;i++){
+        coun[s1[i],charCodeA(0)-charCodeA]++
+    }
+    for(let i =0; i<s2.length;i++){
+        coun[s2[i],charCodeA(0)-charCodeA]--
+    }
+
+    let changes = 0;
+    for (let i = 0; i < 26; i++) {
+        if (count[i] > 0) {
+            changes += count[i];
+        }
+return changes
+    }
+}
+anagram(s)
+
+   </script> 
+</body>
+</html>

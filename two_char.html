@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function isValidAlternating(str) {
+ 
+  for (let i = 2; i < str.length; i++) { 
+    if (str[i] === str[i - 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function alternate(s) {
+  const uniqueChars = [...new Set(s)]; 
+  let maxLength = 0; 
+
+  for (let i = 0; i < uniqueChars.length; i++) {
+    for (let j = i + 1; j < uniqueChars.length; j++) {
+      const char1 = uniqueChars[i];
+      const char2 = uniqueChars[j];
+
+     
+      const filteredString = s.split('').filter(c => c === char1 || c === char2).join('');
+
+      
+      if (isValidAlternating(filteredString)) {
+       
+        maxLength = Math.max(maxLength, filteredString.length);
+      }
+    }
+  }
+
+  return maxLength; 
+}
+
+
+const s = "beabeefeab";
+console.log(alternate(s));
+   </script>
+</body>
+</html>

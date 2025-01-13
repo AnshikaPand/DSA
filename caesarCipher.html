@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function caesarCipher (s,k){
+        k = k%26;
+        let value = ''
+        let alphabetLower = "abcdefghijklmnopqrstuvwxyz";
+        let alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        for(let i = 0 ; i < s.length ;i++){
+            let char = s[i]
+            let shiftedChar = char;
+
+            if(alphabetLower.includes(char)){
+                let index = alphabetLower.indexOf(char)
+                let newIndex = (index+k)%26
+                shiftedChar = alphabetLower[newIndex]
+                
+            }else if (alphabetUpper.includes(char)){
+                let index = alphabetUpper.indexOf(char)
+                let newIndex = (index+k)%26
+                shiftedChar = alphabetUpper[newIndex]
+            }
+            value += shiftedChar
+        }
+        return value
+        }
+        let n = 11;
+let s = "middle-Outz";
+let k = 3;
+
+// Output the result
+console.log(caesarCipher(s, k));
+    </script>
+</body>
+</html>

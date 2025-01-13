@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Element In Arry</title>
+    <script>
+        // let myarry =[10,30,20,3,34,45];
+        // let position=2;
+        // for(let i = position; i< myarry.length-1;i++){
+        //     // console.warn(myarry[i])
+        //     myarry[i]=myarry[i+1];
+        // }
+        // myarry.length=myarry.length-1;
+        //   console.warn(myarry)
+
+        function removeEl(){
+            let myarry =[10,30,20,3,34,45];
+        let position=document.getElementById('position').value;
+        position = parseInt(position)
+        for(let i = position; i< myarry.length-1;i++){
+            // console.warn(myarry[i])
+            myarry[i]=myarry[i+1];
+        }
+        myarry.length=myarry.length-1;
+          console.warn(myarry)
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="enterpostion" id="position"/>
+    <button onclick="removeEl()" >Remove</button>
+</body>
+</html>

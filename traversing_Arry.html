@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arry Traversing</title>
+    <script>
+        let myarry = [35,45,32,87,0,54,43,56,56,98];
+        //traversing
+        // for(let i =0;i < myarry.length ; i++){ 
+        //  document.write(`${myarry[i]} <br>`)
+        // }
+
+        // Accessign
+        // let x ="3";
+        // document.write(myarry[x])
+
+       function element(){
+        let ele = document.getElementById("element").value;
+        if(ele<myarry.length && typeof parseInt(ele) === Number){
+            
+            alert(myarry[ele]);
+        } else{
+            alert("enter vaild input")
+        }
+        
+       }
+
+
+
+        // let string ="hello";
+        // for(let i=0 ;i < string.length ;i++){
+        //     document.write(`${string[i]}`)
+        // }
+    </script>
+</head>
+<body>
+    <input type="text" id="element">
+    <button onclick="element()">Get Element</button>
+</body>
+</html>

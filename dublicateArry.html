@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DublicateArry</title>
+</head>
+<body>
+    <script>
+        function findDunlicate(arr){
+        const set = new Set()
+        
+        for(let i = 0 ; i <arr.length ;i++){
+            if(set.has(arr[i])){
+                return arr[i]
+            }
+            set.add(arr[i])
+            console.log(set)
+        }
+        }
+        arr = [1,2,3,4,4,5]
+        console.log(findDunlicate(arr))
+    </script>
+</body>
+</html>

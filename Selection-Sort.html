@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sorting</title>
+</head>
+<body>
+    <script>
+// let arr = step 1-[35,60,7,80]
+//  step 2 -35 ko compare karege sb then
+// then jo sb choti value hogi uske sath swip kar denge
+//  step 3 - then arry become like this [7,60,35,80]
+// step 4 - [7,35,60,80] - here i compare index 2  means 60 then swip with smallest element
+// step 5-[7,35,60,80] - here i compare index 3 means 60 ever ok then write as it 
+
+let item = [20,12,53,3]
+function selectionShort(data){
+    let minId;
+    for(let i = 0;i<data.length;i++){
+        minId =i // thid hold vule first index value means which index we comapre with other
+        for(let j = i+1;j<data.length;j++){
+            // 12<20
+        if(data[j]<data[minId]){
+            
+            minId=j
+        }
+        }
+        let temp =data[minId]
+        data[minId]=data[i]
+        data[i]=temp
+    }
+}
+selectionShort(item)
+console.log(item)
+
+    </script>
+</body>
+</html>

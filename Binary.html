@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary</title>
+</head>
+<body>
+    <script>
+        // let data = [10,20,30,40,50]
+        // let start = 0;
+        // let find = 40 ;
+        // let end = data.length -1;
+        // let postion = undefined
+        // while(start <=end){
+        //     let mid = Math.floor((start+end)/2)
+        //     if(data[mid]== find){
+        //         postion=mid;
+        //         break
+        //     }else if(data[mid]<find){
+        //         start = mid +1
+        //     }else{
+        //         end = mid -1
+        //     }
+        //     }   
+
+        //     console.warn(postion)
+
+let data = [10,20,30,40,50,60]
+let start = 0
+let target = 40
+let end = data.length-1
+let postion = undefined
+while(start<=end){
+    let mid = Math.floor((start+end)/2)
+    if(data[mid]==find){
+        postion=mid
+        break
+
+    } else if(data[mid]<find){
+        start= mid+1
+    }else{
+        end=mid-1
+    }
+}
+
+
+        
+             console.warn(postion)
+
+//  let arr = [64, 34, 25, 12, 22, 11, 90];
+
+// arr.sort((a, b) => a - b);  
+// console.log("Sorted Array (Ascending):", arr);
+
+
+
+        
+
+
+             </script>
+</body>
+</html>

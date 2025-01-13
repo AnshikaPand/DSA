@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    function marsExploration(s) {
+        let expectPattern ='SOS'
+        let alteredCount = 0
+
+        for (let i = 0; i<s.length ; i++){
+            if(s[i]!== expectPattern[i%3]){
+                alteredCount++
+            }
+        }
+     return alteredCount
+    }
+
+ 
+const receivedSignal = "SOSSPSSQSSOR";
+console.log(marsExploration(receivedSignal)); // Output: 3
+   </script> 
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountVowel</title>
+</head>
+<body>
+  <script>
+    function countVowel(str){
+     
+        let vowel = ['a','i','e','o','u']
+        return str.toLowerCase().split('').filter(char=>vowel.includes(char))
+    }
+
+    console.log(countVowel('hello world'))
+
+    // define an array of vowels
+    // convert the string to lowercase for caseinsensitive couting
+    // split the into arry of char
+    // filter the arry to keep  only vowel  
+    
+  </script>  
+</body>
+</html>

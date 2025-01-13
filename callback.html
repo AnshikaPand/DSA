@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // call back example
+
+    //     function h(x,fn){
+    //         console.log(x*x)
+    //         fn()
+    //     }
+
+    //   h(10,function(){
+    //     console.log("done with call back")
+    //   })  
+
+    //  set time out 
+
+   // console.log("start");
+//setTimeout(function f() {
+   // console.log("time done");
+//}, 3000);
+//console.log("end");
+//for (let i = 0; i < 100000000000; i++) {}
+
+
+// function doubleArry(arr,callback){
+//     return arr.map(callback);
+// }
+
+// function double (value){
+//     return value * 2
+// }
+
+// const number = [1,2,3,4,5];
+// const doubleNumber = doubleArry(number,double)
+// console.log(doubleNumber);
+
+
+// function manipulationString (inputString){
+//     const manipulatedString = inputString.toUpperCase()
+
+//     return function logString(){
+//         console.log("The manipulated string is:" + manipulatedString )
+// }
+
+// }
+
+// const myString = "Hello ,Word"
+// const logMunupationg =manipulationString(myString)
+
+// logMunupationg();
+
+
+
+function ageInday(person){
+
+    const fullName = `${person.firstName}${person.lastName}`
+
+    const ageInday = person.age * 365;
+      return  function longMessage(){
+         console.log(`this is person name ${fullName} and your age ${ageInday}`)
+      }
+}
+
+
+const PersonInfo = {
+    firstName : "Anshika ",
+    lastName : "Pandey",
+    age :21
+}
+
+const logPersonInfo = ageInday(PersonInfo)
+
+logPersonInfo();
+
+    </script>
+</body>
+</html>
